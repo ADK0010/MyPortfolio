@@ -4,10 +4,10 @@ const Navbar = () => {
             <span className="logo text-3xl font-black">AK</span>
             <span className="right">
                 <ul  className="flex gap-x-[4rem]">
-                    <li className="cursor-pointer">Home</li>
-                    <li className="cursor-pointer">Skills</li>
-                    <li className="cursor-pointer">Projects</li>
-                    <li className="cursor-pointer">Contact</li>
+                    <li className="cursor-pointer bg-[#fc5185] p-3 px-6 rounded navItem">Home</li>
+                    <li className="cursor-pointer bg-[#fc5185] p-3 px-6 rounded navItem">Skills</li>
+                    <li className="cursor-pointer bg-[#fc5185] p-3 px-6 rounded navItem">Projects</li>
+                    <li className="cursor-pointer bg-[#fc5185] p-3 px-6 rounded navItem">Contact</li>
                 </ul>
             </span>
         </div>

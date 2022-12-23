@@ -1,17 +1,55 @@
- @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&display=swap'); 
+ @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&display=swap');  
  @tailwind base;
 @tailwind components;
 @tailwind utilities;
+ 
 body{
   background-color:#010026;
   /* background-color:#303a52; */
   color: white;
 }
+.hero{
+  width: 100vw;
+  height: 70vh;
+}
 .logo{
   font-family: 'Dancing Script', cursive;
-  font-weight:900
+  font-weight:900;
+  
 }
+.logo:hover{
+  animation : heartbeat 1.5s ease-in-out infinite both;
+}
+
 .right{
   /* font-family: 'Playfair Display', serif; */
   font-family: 'Open Sans', sans-serif;
+  
+}
+@keyframes slideInLeft{
+  0% {
+    transform: translateX(-30%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes heartbeat{from{transform:scale(1);transform-origin:center center;animation-timing-function:ease-out}10%{transform:scale(.91);animation-timing-function:ease-in}17%{transform:scale(.98);animation-timing-function:ease-out}33%{transform:scale(.87);animation-timing-function:ease-in}45%{transform:scale(1);animation-timing-function:ease-out}}
+@keyframes slideInRight{
+  0%{transform:translateX(30%)}
+  100%{transform:translateX(0)}
+}
+@keyframes shake-bottom{0%,100%{transform:rotate(0deg);transform-origin:50% 100%}10%{transform:rotate(2deg)}20%,40%,60%{transform:rotate(-4deg)}30%,50%,70%{transform:rotate(4deg)}80%{transform:rotate(-2deg)}90%{transform:rotate(2deg)}}
+
+.left_hero{
+  animation: 1s ease-in-out 0s 1 slideInLeft;
+ 
+  
+}
+.right_hero{
+  animation: 1s ease-in-out 0s 1 slideInRight;
+}
+
+.navItem:hover{
+  animation:shake-bottom .8s cubic-bezier(.455,.03,.515,.955) both
 }
